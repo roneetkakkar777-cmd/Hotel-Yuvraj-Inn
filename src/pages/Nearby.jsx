@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRightIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import {
   BuildingStorefrontIcon,
   BuildingOffice2Icon,
@@ -11,80 +12,78 @@ import {
   TruckIcon,
 } from "@heroicons/react/24/outline";
 
-// Helper to build Google Maps search links
 function mapsSearchLink(q) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 }
 
-// Seed attractions (replace/expand with real picks)
 const RAW_SPOTS = [
   {
-    id: "butterfly-park",
-    name: "Sector 117 Butterfly Park",
-    category: "Parks",
-    approx: "5–10 min",
-    notes: "Local green space; good for short walks.",
-    address: "Sector 117, Noida",
+    id: "shipra-mall",
+    name: "Shipra Mall",
+    category: "Shopping",
+    approx: "~5 min",
+    notes: "Popular shopping destination with restaurants, cinema & retail.",
+    address: "Shipra Sun City, Indirapuram",
   },
   {
-    id: "dlf-mall",
-    name: "DLF Mall of India (Sec‑18)",
+    id: "wave-city",
+    name: "Wave City Center",
     category: "Shopping",
-    approx: "25–35 min",
-    notes: "Large mall; dining and retail hub.",
+    approx: "~10 min",
+    notes: "Large mall with entertainment options and food court.",
+    address: "NH-24, Indirapuram",
+  },
+  {
+    id: "indirapuram-park",
+    name: "Indirapuram Habitat Centre",
+    category: "Parks",
+    approx: "~5 min",
+    notes: "Green spaces and walking paths for a morning stroll.",
+    address: "Indirapuram, Ghaziabad",
+  },
+  {
+    id: "nh24-business",
+    name: "NH-24 Business Corridor",
+    category: "Business",
+    approx: "~5 min",
+    notes: "Major business and corporate offices along NH-24.",
+    address: "NH-24, Ghaziabad",
+  },
+  {
+    id: "vaishali-metro",
+    name: "Vaishali Metro Station",
+    category: "Transit",
+    approx: "~10 min",
+    notes: "Blue Line Metro — direct connectivity to Delhi.",
+    address: "Vaishali, Ghaziabad",
+  },
+  {
+    id: "noida-sector18",
+    name: "Sector 18, Noida",
+    category: "Shopping",
+    approx: "~20–25 min",
+    notes: "Major commercial hub with malls, dining and entertainment.",
     address: "Sector 18, Noida",
   },
   {
-    id: "kidzania",
-    name: "KidZania Delhi NCR",
-    category: "Family",
-    approx: "25–35 min",
-    notes: "Popular family edutainment venue.",
-    address: "Near The Great India Place, Noida",
+    id: "hindon-river",
+    name: "Hindon River Eco Park",
+    category: "Parks",
+    approx: "~15 min",
+    notes: "River-side park, good for evening walks.",
+    address: "Hindon River, Ghaziabad",
   },
   {
-    id: "sec-62",
-    name: "Noida Sector 62 Business Hub",
-    category: "Business",
-    approx: "20–30 min",
-    notes: "Corporate offices and IT parks.",
-    address: "Sector 62, Noida",
-  },
-  {
-    id: "sec-51-metro",
-    name: "Noida Sector 51/52 Metro",
-    category: "Transit",
-    approx: "10–15 min",
-    notes: "Aqua/Blue line interchange nearby.",
-    address: "Sector 51/52, Noida",
-  },
-  {
-    id: "gardens-galleria",
-    name: "Gardens Galleria",
+    id: "dlf-mall-noida",
+    name: "DLF Mall of India",
     category: "Leisure",
-    approx: "25–35 min",
-    notes: "Dining and entertainment near Sec‑18.",
-    address: "Sector 38, Noida",
-  },
-  {
-    id: "logix-mall",
-    name: "Logix City Centre",
-    category: "Shopping",
-    approx: "15–20 min",
-    notes: "Multiplex and retail; mid‑distance.",
-    address: "Sector 32, Noida",
-  },
-  {
-    id: "supertech-north-eye",
-    name: "Supertech North Eye (Landmark)",
-    category: "Landmarks",
-    approx: "10–15 min",
-    notes: "Tall landmark near Sectors 74–79.",
-    address: "Sector 74, Noida",
+    approx: "~25–30 min",
+    notes: "One of the largest malls in India — dining, cinema, retail.",
+    address: "Sector 18, Noida",
   },
 ];
 
-const CATEGORIES = ["All", "Parks", "Shopping", "Family", "Business", "Transit", "Leisure", "Landmarks"];
+const CATEGORIES = ["All", "Parks", "Shopping", "Business", "Transit", "Leisure"];
 
 function CategoryIcon({ category, className = "h-5 w-5" }) {
   const map = {
@@ -102,16 +101,19 @@ function CategoryIcon({ category, className = "h-5 w-5" }) {
 
 function SpotCard({ spot }) {
   return (
-    <article className="bg-white rounded-xl border border-[#2F3A56]/10 p-4 flex flex-col gap-3">
+    <article className="card-hover bg-white rounded-2xl border border-[#1A2540]/8 p-5 flex flex-col gap-4 shadow-sm">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h3 className="font-semibold">{spot.name}</h3>
-          <p className="mt-1 text-sm text-[#2F3A56]/80">{spot.address}</p>
+          <h3 className="font-bold text-[#1A2540]">{spot.name}</h3>
+          <p className="mt-1 text-xs text-[#1A2540]/50">{spot.address}</p>
         </div>
-        <CategoryIcon category={spot.category} className="h-6 w-6 text-[#C7A15C]" />
+        <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#C9973A]/10 shrink-0">
+          <CategoryIcon category={spot.category} className="h-5 w-5 text-[#C9973A]" />
+        </div>
       </div>
+      {spot.notes && <p className="text-sm text-[#1A2540]/65 leading-relaxed">{spot.notes}</p>}
       <div className="flex items-center justify-between">
-        <span className="inline-flex items-center gap-2 text-sm text-[#2F3A56]/80">
+        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#C9973A]">
           <MapPinIcon className="h-4 w-4" />
           {spot.approx}
         </span>
@@ -119,12 +121,11 @@ function SpotCard({ spot }) {
           href={mapsSearchLink(`${spot.name} ${spot.address}`)}
           target="_blank"
           rel="noreferrer"
-          className="text-sm text-[#2F3A56] hover:text-[#C7A15C]"
+          className="text-xs font-semibold text-[#1A2540]/50 hover:text-[#C9973A] transition-colors flex items-center gap-1"
         >
-          Open in Maps
+          Open Maps <ArrowRightIcon className="h-3 w-3" />
         </a>
       </div>
-      {spot.notes && <p className="text-sm text-[#2F3A56]/80">{spot.notes}</p>}
     </article>
   );
 }
@@ -149,26 +150,32 @@ export default function Nearby() {
   }, [category, query]);
 
   return (
-    <div className="bg-[#F7F6F3] text-[#2F3A56]">
-      <section className="mx-auto max-w-7xl px-4 py-8">
-        <header className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-semibold">Nearby</h1>
-          <p className="mt-2 text-[#2F3A56]/80">
-            Useful places and attractions around Sector‑117 with typical travel times. Times vary with traffic; check live maps.
+    <div className="bg-[#F9F7F2] text-[#1A2540]">
+      {/* Header */}
+      <section className="hero-gradient py-14 px-4">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="section-label">Explore Around Us</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mt-1">
+            Nearby <span className="gold-text">Attractions</span>
+          </h1>
+          <p className="mt-4 text-white/70 max-w-xl mx-auto">
+            Useful places around Indirapuram with approximate travel times from Hotel Yuvraj Inn.
           </p>
-        </header>
+        </div>
+      </section>
 
+      <section className="mx-auto max-w-7xl px-4 py-14">
         {/* Controls */}
-        <div className="bg-white border border-[#2F3A56]/10 rounded-xl p-4 grid md:grid-cols-3 gap-3">
+        <div className="glass-card rounded-2xl border border-[#1A2540]/8 p-5 shadow-sm mb-8 grid md:grid-cols-3 gap-4">
           <div className="flex gap-2 flex-wrap md:col-span-2">
             {CATEGORIES.map((c) => (
               <button
                 key={c}
                 onClick={() => setCategory(c)}
-                className={`px-3 py-1.5 text-sm rounded-md border ${
+                className={`px-4 py-2 text-sm rounded-xl border font-medium transition-all duration-200 ${
                   category === c
-                    ? "bg-[#2F3A56] text-white border-[#2F3A56]"
-                    : "bg-white text-[#2F3A56] border-[#2F3A56]/20 hover:border-[#2F3A56]/40"
+                    ? "bg-[#1A2540] text-white border-[#1A2540] shadow-sm"
+                    : "bg-white text-[#1A2540]/70 border-[#1A2540]/15 hover:border-[#C9973A]/40 hover:text-[#C9973A]"
                 }`}
               >
                 {c}
@@ -178,30 +185,42 @@ export default function Nearby() {
           <div>
             <input
               type="text"
-              placeholder="Search e.g., Mall, Metro, Park"
+              placeholder="Search places..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full rounded-md border border-[#2F3A56]/20 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#C7A15C]/40"
+              className="w-full rounded-xl border border-[#1A2540]/15 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9973A]/40 focus:border-[#C9973A] transition-all"
             />
           </div>
         </div>
 
         {/* Grid */}
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {spots.map((s) => (
             <SpotCard key={s.id} spot={s} />
           ))}
+          {spots.length === 0 && (
+            <div className="col-span-full text-center py-12 text-[#1A2540]/40">
+              <p>No places match your search.</p>
+            </div>
+          )}
         </div>
 
         {/* CTA */}
-        <div className="mt-8 bg-[#2F3A56] text-white rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p>Need tailored recommendations near Sector‑117 for specific plans?</p>
-          <div className="flex gap-3">
-            <a href="tel:+919599616249" className="rounded-md bg-white/10 px-4 py-2 hover:bg-white/15">
+        <div className="mt-10 hero-gradient rounded-2xl p-7 flex flex-col md:flex-row items-center justify-between gap-5">
+          <div>
+            <h3 className="text-xl font-bold text-white">Need local recommendations?</h3>
+            <p className="text-white/60 text-sm mt-1">Our team can help you plan your visit around Indirapuram.</p>
+          </div>
+          <div className="flex gap-3 flex-wrap">
+            <a
+              href="tel:+919990917830"
+              className="inline-flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 text-white px-5 py-2.5 text-sm font-semibold hover:bg-white/20 transition-colors"
+            >
+              <PhoneIcon className="h-4 w-4" />
               Call Now
             </a>
-            <Link to="/contact" className="rounded-md bg-[#C7A15C] px-4 py-2 text-white hover:opacity-90">
-              Ask Us
+            <Link to="/contact" className="gold-btn inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold">
+              Ask Us <ArrowRightIcon className="h-4 w-4" />
             </Link>
           </div>
         </div>
