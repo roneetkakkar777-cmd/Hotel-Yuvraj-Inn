@@ -71,7 +71,7 @@ export default function Policies() {
             Policies & <span className="gold-text">FAQs</span>
           </h1>
           <p className="mt-4 text-white/70 max-w-xl mx-auto">
-            Clear, transparent policies for a comfortable stay at Hotel Yuvraj Inn.
+            Clear, transparent policies for a comfortable stay at Hotel Youvraj Inn.
           </p>
         </div>
       </section>

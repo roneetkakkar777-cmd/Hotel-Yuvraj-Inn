@@ -82,7 +82,7 @@ export default function Amenities() {
             Our <span className="gold-text">Amenities</span>
           </h1>
           <p className="mt-4 text-white/70 max-w-xl mx-auto">
-            Everything you need for a comfortable stay at Hotel Yuvraj Inn, Indirapuram.
+            Everything you need for a comfortable stay at Hotel Youvraj Inn, Indirapuram.
           </p>
         </div>
       </section>

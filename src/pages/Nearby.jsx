@@ -159,7 +159,7 @@ export default function Nearby() {
             Nearby <span className="gold-text">Attractions</span>
           </h1>
           <p className="mt-4 text-white/70 max-w-xl mx-auto">
-            Useful places around Indirapuram with approximate travel times from Hotel Yuvraj Inn.
+            Useful places around Indirapuram with approximate travel times from Hotel Youvraj Inn.
           </p>
         </div>
       </section>

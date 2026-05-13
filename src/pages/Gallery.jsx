@@ -8,7 +8,7 @@ import lobbyImg from "../assets/images/lobby.jpg";
 import bathroomImg from "../assets/images/bathroom.jpg";
 
 const RAW_IMAGES = [
-  { id: 1, src: heroImg, alt: "Hotel Yuvraj Inn — Signature Room", category: "Rooms" },
+  { id: 1, src: heroImg, alt: "Hotel Youvraj Inn — Signature Room", category: "Rooms" },
   { id: 2, src: room1, alt: "Standard Double Room", category: "Rooms" },
   { id: 3, src: room2, alt: "Deluxe Double Room", category: "Rooms" },
   { id: 4, src: room3, alt: "Executive Room", category: "Rooms" },

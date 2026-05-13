@@ -28,7 +28,7 @@ export default function Contact() {
       return;
     }
 
-    data.set("subject", "New enquiry - Hotel Yuvraj Inn website");
+    data.set("subject", "New enquiry - Hotel Youvraj Inn website");
     data.set("from_name", name);
     data.set("redirect", "");
 
@@ -73,7 +73,7 @@ export default function Contact() {
         <div className="lg:col-span-2 space-y-5 animate-fade-left">
           {/* Hotel info */}
           <div className="glass-card rounded-2xl p-6 shadow-sm border border-[#1A2540]/8">
-            <h2 className="text-xl font-bold text-[#1A2540] mb-4">Hotel Yuvraj Inn</h2>
+            <h2 className="text-xl font-bold text-[#1A2540] mb-4">Hotel Youvraj Inn</h2>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <div className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-[#C9973A]/10 shrink-0">
@@ -143,8 +143,8 @@ export default function Contact() {
 
             {/* Web3Forms hidden field - replace access key above */}
             <input type="hidden" name="access_key" value="YOUR_NEW_ACCESS_KEY" />
-            <input type="hidden" name="from_name" value="Hotel Yuvraj Inn Website" />
-            <input type="hidden" name="subject" value="New enquiry - Hotel Yuvraj Inn website" />
+            <input type="hidden" name="from_name" value="Hotel Youvraj Inn Website" />
+            <input type="hidden" name="subject" value="New enquiry - Hotel Youvraj Inn website" />
             <input type="hidden" name="redirect" value="" />
 
             <div className="grid md:grid-cols-2 gap-5">
@@ -261,7 +261,7 @@ export default function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Hotel Yuvraj Inn Map"
+              title="Hotel Youvraj Inn Map"
             />
           </div>
         </div>

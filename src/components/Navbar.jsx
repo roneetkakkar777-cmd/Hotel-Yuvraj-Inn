@@ -68,11 +68,11 @@ export default function Navbar() {
             <img
               src={logo}
               className="h-11 w-11 rounded-full scale-125 object-cover"
-              alt="Hotel Yuvraj Inn logo"
+              alt="Hotel Youvraj Inn logo"
             />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-white font-bold tracking-wide text-sm">Hotel Yuvraj Inn</span>
+            <span className="text-white font-bold tracking-wide text-sm">Hotel Youvraj Inn</span>
             <span className="text-[#C9973A] text-[10px] tracking-widest uppercase font-medium">Indirapuram, Ghaziabad</span>
           </div>
         </Link>
@@ -162,9 +162,9 @@ export default function Navbar() {
           <div className="px-4 pt-4 pb-4 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-2">
               <div className="h-9 w-9 rounded-full overflow-hidden ring-2 ring-[#C9973A]/40">
-                <img src={logo} className="h-9 w-9 rounded-full scale-125" alt="Hotel Yuvraj Inn" />
+                <img src={logo} className="h-9 w-9 rounded-full scale-125" alt="Hotel Youvraj Inn" />
               </div>
-              <span className="text-white font-semibold text-sm">Hotel Yuvraj Inn</span>
+              <span className="text-white font-semibold text-sm">Hotel Youvraj Inn</span>
             </div>
             <button
               type="button"

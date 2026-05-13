@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <h4 className="text-lg font-bold tracking-wide">
-            Hotel <span className="text-[#C9973A]">Yuvraj Inn</span>
+            Hotel <span className="text-[#C9973A]">Youvraj Inn</span>
           </h4>
           <p className="text-sm mt-3 text-white/60 leading-relaxed">
             Your comfortable home away from home in Indirapuram, Ghaziabad. Book direct for the best rates.
@@ -93,7 +93,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5 text-center">
         <p className="text-xs text-white/40">
-          © {year} Hotel Yuvraj Inn. All rights reserved. &nbsp;|&nbsp; 4, Shakti Khand 4, Indirapuram, Ghaziabad 201014
+          © {year} Hotel Youvraj Inn. All rights reserved. &nbsp;|&nbsp; 4, Shakti Khand 4, Indirapuram, Ghaziabad 201014
         </p>
       </div>
     </footer>

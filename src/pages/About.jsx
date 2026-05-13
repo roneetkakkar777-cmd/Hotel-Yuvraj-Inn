@@ -11,7 +11,7 @@ export default function About() {
         <div className="mx-auto max-w-4xl text-center">
           <span className="section-label">Our Story</span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-1">
-            About <span className="gold-text">Hotel Yuvraj Inn</span>
+            About <span className="gold-text">Hotel Youvraj Inn</span>
           </h1>
           <p className="mt-4 text-white/70 max-w-xl mx-auto">
             A warm, comfortable stay in the heart of Indirapuram, Ghaziabad — thoughtfully run for your comfort.
@@ -27,13 +27,13 @@ export default function About() {
             Your Home Away From Home
           </h2>
           <p className="mt-4 text-[#1A2540]/70 leading-relaxed">
-            Hotel Yuvraj Inn is a comfortable, well-maintained property located at 4, Shakti Khand 4, 
+            Hotel Youvraj Inn is a comfortable, well-maintained property located at 4, Shakti Khand 4, 
             Indirapuram, Ghaziabad — thoughtfully designed to give travelers a reliable, calm base 
             in the NCR region. We focus on clean rooms, clear policies, responsive communication, 
             and a location that makes your plans simple.
           </p>
           <p className="mt-3 text-[#1A2540]/70 leading-relaxed">
-            Whether you're visiting for business or leisure, Hotel Yuvraj Inn offers the perfect 
+            Whether you're visiting for business or leisure, Hotel Youvraj Inn offers the perfect 
             blend of comfort and value. Our team is dedicated to making your stay memorable and hassle-free.
           </p>
           <div className="mt-7 flex gap-4">
@@ -50,7 +50,7 @@ export default function About() {
           <div className="absolute -inset-3 bg-[#C9973A]/15 rounded-3xl blur-2xl" />
           <img
             src={heroImg}
-            alt="Hotel Yuvraj Inn"
+            alt="Hotel Youvraj Inn"
             className="relative w-full h-80 object-cover rounded-3xl shadow-2xl"
             loading="lazy"
           />
@@ -63,7 +63,7 @@ export default function About() {
           <div className="glass-card card-hover rounded-2xl p-7 border border-[#1A2540]/8 shadow-sm animate-fade-left">
             <h2 className="text-xl font-bold text-[#1A2540] mb-3">Our Story</h2>
             <p className="text-sm text-[#1A2540]/70 leading-relaxed">
-              Hotel Yuvraj Inn was established to give travelers a dependable, comfortable base 
+              Hotel Youvraj Inn was established to give travelers a dependable, comfortable base 
               in Indirapuram — without unnecessary frills. Our aim is clean rooms, clear policies, 
               responsive service, and a location that makes city plans simple.
             </p>

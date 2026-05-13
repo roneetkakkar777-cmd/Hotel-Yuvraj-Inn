@@ -91,7 +91,7 @@ export default function Home() {
             <span className="section-label">Welcome to</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Hotel{" "}
-              <span className="gold-text">Yuvraj Inn</span>
+              <span className="gold-text">Youvraj Inn</span>
             </h1>
             <p className="mt-5 text-lg text-white/70 leading-relaxed max-w-lg">
               Experience comfortable and affordable stays in the heart of Indirapuram, Ghaziabad. 
@@ -142,7 +142,7 @@ export default function Home() {
             <div className="relative">
               <img
                 src={heroImg}
-                alt="Hotel Yuvraj Inn room"
+                alt="Hotel Youvraj Inn room"
                 className="relative w-full h-72 md:h-[420px] object-cover rounded-3xl shadow-2xl"
                 loading="eager"
               />
@@ -339,7 +339,7 @@ export default function Home() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Hotel Yuvraj Inn Location"
+              title="Hotel Youvraj Inn Location"
             />
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Location() {
             Our <span className="gold-text">Location</span>
           </h1>
           <p className="mt-4 text-white/70 max-w-xl mx-auto">
-            Hotel Yuvraj Inn is conveniently located in Indirapuram, Ghaziabad — easy access to Delhi NCR.
+            Hotel Youvraj Inn is conveniently located in Indirapuram, Ghaziabad — easy access to Delhi NCR.
           </p>
         </div>
       </section>
@@ -114,7 +114,7 @@ export default function Location() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Hotel Yuvraj Inn Location Map"
+                title="Hotel Youvraj Inn Location Map"
               />
             </div>
             <p className="mt-3 text-xs text-[#1A2540]/40 text-center">
