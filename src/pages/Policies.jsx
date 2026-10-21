@@ -14,7 +14,7 @@ import {
   BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 
-function PolicyItem({ icon: Icon, title, children, emoji }) {
+function PolicyItem({ icon: Icon, title, children }) {
   return (
     <div className="glass-card card-hover rounded-2xl p-5 border border-[#1A2540]/8 shadow-sm">
       <div className="flex items-start gap-4">

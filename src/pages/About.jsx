@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { HeartIcon, ShieldCheckIcon, SparklesIcon, MapPinIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import heroImg from "../assets/images/hero-room.jpg";
-import lobbyImg from "../assets/images/lobby.jpg";
 
 export default function About() {
   return (

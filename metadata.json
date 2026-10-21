@@ -1,0 +1,8 @@
+{
+  "name": "Hotel Youvraj Inn",
+  "description": "Hotel Youvraj Inn - Comfortable and affordable hotel stays in Indirapuram, Ghaziabad. Book direct for best rates.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
